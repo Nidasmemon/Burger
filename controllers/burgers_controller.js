@@ -15,17 +15,18 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
+    
     burger.insertOne([
         "burger_name", "devoured"
     ], [
-        req.body.burger_name, req.body.devoured
+        req.body.burger_name, false
     ], function (result) {
         // Send back the ID of the new quote
         res.json({ id: result.insertId });
     });
 });
 
-router.put("/api/burgers/:id", function (req, res) {
+router.PUT("/api/burgers/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);

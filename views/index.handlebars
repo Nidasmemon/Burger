@@ -13,7 +13,11 @@
                     <div class="card-header">
                         <h2 class="card-title">Ready to Eat!</h2>
                     </div>
-                    <button type="button" class="btn btn-primary">Devour it!</button>
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                            {{> burgers/burger-block devour=true}}
+                        {{/unless}}
+                    {{/each}}
                 </div>
             </div>
         </div>
@@ -23,6 +27,11 @@
                     <div class="card-header">
                         <h2 class="card-title">Devoured!</h2>
                     </div>
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            {{> burgers/burger-block devour=false}}
+                        {{/if}}
+                    {{/each}}
                 </div>
             </div>
         </div>
@@ -36,13 +45,14 @@
                     <div class="card-header">
                         <h2 class="card-title">Make a New Burger!</h2>
                     </div>
-                    <form>
+                    <form class="create-form">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Enter a burger you want to eat. Then click the "Submit" button.</label>
                             <input type="text" class="form-control" id="newBurger" placeholder="Big Mac">
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    
                 </div>
             </div>
         </div>
