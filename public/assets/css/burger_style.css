@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(129, 201, 224);
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkblue;
+}
+
+.header {
+    margin: 30px;
+}
+
+.card-header {
+    background-color: rgba(24, 164, 206, 0.699);
+    color: darkblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    line-height: 1.5em;
+    margin-top: 5px;
+}
+
+#div1 {
+    margin-bottom: 30px;
+}
+
+.card {
+    margin: 0 auto 0 auto;
+}
+
+#div2 {
+    width: 45%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: darkblue;
+}
+
+.btn:hover {
+    background-color: lightblue;
+}
