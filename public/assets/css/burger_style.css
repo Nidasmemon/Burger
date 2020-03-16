@@ -45,7 +45,6 @@ body {
     background-color: lightblue;
 }
 
-li {
-    list-style-type: none;
-    /* width: 250px; */
+#newBurger {
+    margin-bottom: 10px;
 }

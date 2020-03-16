@@ -6,10 +6,15 @@
         </div>
         <div class="col-sm mt-3 mr-5">
             {{#unless devoured}}
-            <button class="devour btn btn-primary" data-id="{{id}}" data-newsleep="{{sleep}}">
+            <button class="devour btn btn-primary" data-id="{{id}}">
                 Devour it!
             </button>
             {{/unless}}
+            {{#if devoured}}
+            <button class="delete-burger btn btn-primary" data-id="{{id}}">
+                Delete!
+            </button>
+            {{/if}}
         </div>
     </div>
     <hr>
